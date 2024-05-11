@@ -118,7 +118,7 @@ migrate:
 # Django migrations
 migrations: makemigrations migrate;
 
-# Collect static files
+# Create super user
 createsuperuser:
 	docker compose -f $(COMPOSE_FILE) $(ENV_FILE) exec $(DJANGO) python manage.py createsuperuser;
 
